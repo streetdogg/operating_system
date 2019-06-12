@@ -2,7 +2,7 @@ GPPPARAMS = -m32 -fno-use-cxa-atexit -nostdlib -fno-builtin -fno-rtti -fno-excep
 ASPARAMS  = --32
 LDPARAMS = -melf_i386
 
-objects = loader.o kernel.o port.o gdt.o
+objects = loader.o kernel.o port.o gdt.o interruptstubs.o interrupts.o
 
 %.o: %.cpp
 	g++ $(GPPPARAMS) -o $@ -c $<
